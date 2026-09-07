@@ -1,3 +1,4 @@
+import type { AssetCategory } from "../types";
 import type {Asset} from '../types';
 const A=(id:string,name:string,category:any,kind:any,icon:string,w=2,h=1,d=2,tags:string[]=[]):Asset=>({id,name,category,kind,icon,width:w,height:h,depth:d,color:'#c7c9d1',material:'Paint',tags:[name.toLowerCase(),...tags]});
 export const assets:Asset[]=[

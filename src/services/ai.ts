@@ -1,0 +1,3 @@
+export interface AIPlan {summary:string;rooms:string[];actions:string[]}
+export async function generateLocalDesign(prompt:string):Promise<AIPlan>{const p=prompt.toLowerCase();const rooms=['Entrance','Living Room','Kitchen','Bathroom'];if(p.includes('3-bedroom'))rooms.push('Master Bedroom','Bedroom','Bedroom');if(p.includes('gaming'))rooms.push('Gaming Room');if(p.includes('office'))rooms.push('Office');return{summary:`Local planner interpreted: “${prompt}”`,rooms,actions:['Create room shells','Place essential furniture','Apply a coordinated modern palette']};}
+// Replace this function with a fetch() call to your AI provider. Keep API keys server-side.
